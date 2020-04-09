@@ -1,0 +1,259 @@
+.common {
+
+    .page_content {
+        padding: 40px;
+
+        @include media($mobile) {
+            padding: 20px;
+        }
+
+        .column {
+            @include span-columns(9);
+
+            @include media($mobile) {
+                @include span-columns(4);
+            }
+
+            h3 {
+                color: $red;
+                margin-bottom: 10px;
+            }
+
+            &.copy {
+
+                h2 {
+                    font-size: 34px;
+                    margin-bottom: 10px;
+
+                    @include media($tablet) {
+                        font-size: 30px;
+                    }
+
+                    @include media($mobile) {
+                        font-size: 26px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 20px;
+
+                    @include media($mobile) {
+                        font-size: 14px;
+                    }
+                }
+
+                h3 {
+
+                    @include media($tablet) {
+                        font-size: 15px;
+                    }
+
+                    @include media($mobile) {
+                        font-size: 13px;
+                    }
+                }
+
+                ul {
+                    @include span-columns(12);
+
+                    li {
+                        margin-bottom: 10px;
+                        padding-left: 20px;
+
+                        &:before {
+                            content: '';
+                            background: url('../images/list-icon.png') no-repeat;
+                            background-size: 100%;
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            left: 0;
+                            top: 6px;
+
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .two_column {
+                    ul {
+                        @include span-columns(6);
+                    }
+                }
+
+                .project-logo {
+                    max-width: 150px;
+
+                    @include media($mobile) {
+                        max-width: 100px;
+                    }
+
+                    &.expanded {
+                        max-width: 250px;
+
+                        @include media($mobile) {
+                            max-width: 200px;
+                        }
+                    }
+                }
+
+            }
+
+            &.sidebar {
+                @include span-columns(3);
+
+                @include media($mobile) {
+                    @include span-columns(4);
+                }
+
+                h3 {
+                    font-size: 14px;
+
+                    @include media($tablet) {
+                        font-size: 12px;
+                    }
+                }
+
+                .sidebar_copy {
+                    padding: 20px;
+                    background: #f8f8f8;
+
+                    @include media($tablet) {
+                        padding: 10px;
+                    }
+
+
+                    p {
+                        margin-bottom: 5px;
+
+                        @include media($tablet) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    a {
+                        color: $black;
+
+                        @include media($tablet) {
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.contact {
+
+    h2 {
+        @include futuramedium;
+        font-size: 28px;
+
+        @include media($mobile) {
+            font-size: 24px;
+        }
+    }
+
+    label {
+        @include futuramedium;
+
+        @include media($mobile) {
+            font-size: 14px;
+        }
+    }
+
+    input, textarea {
+        @include futurabook;
+        font-size: 16px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+    input[type="text"],input[type="email"] {
+        height: 40px;
+
+        @include media($mobile) {
+            height: 34px;
+        }
+    }
+    
+    form {
+        background: #f8f8f8;
+        padding: 20px 40px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        width: 70%;
+        margin: 20px auto;
+
+        @include media($tablet) {
+            width: 90%;
+        }
+
+        @include media($mobile) {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    .success_message {
+        padding: 10% 0;
+    }
+}
+
+.page_content.team, .page_content.project {
+
+    .my_row {
+        padding: 40px 0;
+        border-bottom: 1px solid $darkGray;
+
+        @include media($smallMobile) {
+            padding: 20px 0;
+        }
+
+        &:last-child {
+            border-bottom: none;
+
+            @include media($smallMobile) {
+                border-bottom: 1px solid $darkGray;
+                margin-bottom: 40px;
+            }
+        }
+
+        .column {
+            @include span-columns(8);
+
+            @include media($smallMobile) {
+                @include span-columns(4);
+            }
+
+            &.image {
+                @include span-columns(4);
+
+                @include media($smallMobile) {
+                    @include span-columns(4);
+                    margin-bottom: 20px;
+                }
+            }
+
+            h2 {
+                @include futurabold;
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,232 @@
+.slider_section {
+    border-top: 6px solid $red;
+
+    .carousel-indicators {
+        right: 0;
+        left: auto;
+
+        li {
+            width: 20px;
+            height: 5px;
+        }
+    }
+    .carousel-caption {
+        left: 0;
+        right: auto;
+        background: rgba(255,255,255,.8);
+        text-align: left;
+        padding: 20px;
+        border-right: 8px solid $red;
+        max-width: 600px;
+        width: 40%;
+
+        @include media($tablet) {
+            width: 50%;
+            padding: 10px 20px;
+        }
+
+        h3 {
+            @include futurabold;
+            text-transform: uppercase;
+            color: $red;
+            margin-bottom: 10px;
+
+            @include media($tablet) {
+                font-size: 16px;
+            }
+        }
+
+        .quote {
+            width: 100%;
+
+            h4 {
+                @include futurabook;
+                margin: 10px 0;
+                color: $black;
+                font-style: italic;
+                display: inline;
+
+                @include media($tablet) {
+                    font-size: 13px;
+                }
+            }
+
+            img {
+                width: auto;
+
+                @include media($tablet) {
+                    width: 8px;
+                }
+            }
+        }
+
+        p {
+            text-transform: uppercase;
+            color: $red;
+            margin-top: 10px;
+
+            @include media($tablet) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.about_section {
+    padding: 40px;
+    color: $black;
+
+    @include media($mobile) {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+
+        @include media($tablet) {
+            font-size: 30px
+        }
+
+        @include media($mobile) {
+            font-size: 26px;
+        }
+    }
+
+    p {
+
+        @include media($tablet) {
+            font-size: 16px;
+        }
+
+
+        @include media($mobile) {
+            font-size: 14px;
+        }
+    }
+
+    .three_columns {
+        color: $black;
+        padding: 40px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        @include media($mobile) {
+            @include span-columns(4);
+        }
+
+        .column {
+            @include span-columns(4);
+            float: none;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            background: #f8f8f8;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+
+            @include media($mobile) {
+                @include span-columns(4);
+                margin-bottom: 20px;
+            }
+
+            &:last-child {
+                margin-right: auto;
+            }
+
+            &:first-child {
+                .icon_wrap {
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+
+            &:hover {
+                background: $red;
+            }
+
+            .icon_wrap {
+                padding: 20px;
+
+                img {
+                    width: 60px;
+                }
+            }
+
+            h3 {
+                font-size: 20px;
+                color: $red;
+
+                @include media($tablet) {
+                    font-size: 18px;
+                }
+            }
+
+            p {
+                @include media($tablet) {
+                    font-size: 14px;
+                }
+            }
+
+            a {
+                @include span-columns(12);
+                color: $black;
+                padding: 20px 30px 40px;
+
+                &:hover {
+                    color: $white;
+
+                    h3 {
+                        color: $white;
+                    }
+
+                    .icon_wrap {
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 60px;
+                            height: 100%;
+                            z-index: 1;
+                        }
+
+                        &.about:before {
+                            background: url('../images/icon-about-white.png') no-repeat;
+                            background-size: 100%;
+                            width: 120px;
+                        }
+
+                        &.services:before {
+                            background: url('../images/icon-services-white.png') no-repeat;
+                            background-size: 100%;
+                        }
+
+                        &.contact:before {
+                            background: url('../images/icon-contact-white.png') no-repeat;
+                            background-size: 100%;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}
+

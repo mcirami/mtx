@@ -1,0 +1,7 @@
+# Use PHP70CGI as default
+AddHandler fcgid70-script .php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
